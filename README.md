@@ -2,7 +2,7 @@
 
 Modern Nike-inspired website built with **React** & **Tailwind CSS**. Features dark mode, responsive design, and smooth animations.
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Site-FF6452?style=for-the-badge)](your-netlify-url)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Site-FF6452?style=for-the-badge)](https://nikeshowcase.netlify.app/)
 
 ## Features
 
