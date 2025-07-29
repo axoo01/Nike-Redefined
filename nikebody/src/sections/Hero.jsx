@@ -61,7 +61,7 @@ const Hero = () => {
             your active life.
           </p>
           <Button label="Shop now" iconURL={arrowRight} />
-          <div className="flex justify-start items-start flex-wrap mt-8 w-full gap-16 max-sm:gap-6">
+          <div className="flex justify-start items-start flex-wrap mt-8 w-full gap-16 max-sm:gap-4">
             {statistics.map((stat, index) => (
               <div key={stat.label}>
                 <p className="text-4xl font-palanquin font-bold">
