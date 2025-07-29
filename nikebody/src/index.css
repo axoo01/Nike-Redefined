@@ -61,6 +61,12 @@
 }
 
 @layer utilities {
+  .custom-dots li.slick-active div {
+    @apply bg-coral-red scale-125;
+  }
+  .slick-slide-active {
+    @apply scale-100;
+  }
   .padding {
     @apply sm:px-16 px-8 sm:py-24 py-12;
   }

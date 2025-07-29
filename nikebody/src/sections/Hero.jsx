@@ -51,17 +51,17 @@ const Hero = () => {
               The New Arrival
             </span>
             <br />
-            <span className="text-coral-red mt-3 inline-block relative z-10">
+            <span className="text-coral-red mt-3 inline-block">
               Nike
-            </span>{" "}
-            <span className="relative z-10">Shoes</span>
+            </span>
+            Shoes
           </h1>
-          <p className="font-montserrat text-slate-gray dark:text-light-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
+          <p className="font-montserrat text-slate-gray dark:text-light-gray text-lg leading-8 mt-6 mb-6 sm:max-w-sm">
             Discover stylish Nike arrivals, quality comfort, and innovation for
             your active life.
           </p>
           <Button label="Shop now" iconURL={arrowRight} />
-          <div className="flex justify-start items-start flex-wrap mt-20 w-full gap-16">
+          <div className="flex justify-start items-start flex-wrap mt-14 w-full gap-16 max-sm:gap-10">
             {statistics.map((stat, index) => (
               <div key={stat.label}>
                 <p className="text-4xl font-palanquin font-bold">
