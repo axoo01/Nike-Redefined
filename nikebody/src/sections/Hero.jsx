@@ -64,7 +64,7 @@ const Hero = () => {
           <div className="flex justify-start items-start flex-wrap mt-20 max-sm:mt-8 w-full gap-16 max-sm:gap-4">
             {statistics.map((stat, index) => (
               <div key={stat.label}>
-                <p className="text-4xl max-sm:text-[2rem] font-palanquin font-bold">
+                <p className="text-4xl max-sm:text-[2.20rem] font-palanquin font-bold">
                   {stat.value === "1k+" ? (
                     <FadeIn delay={index * 0.3} duration={4}>
                       {stat.value}
