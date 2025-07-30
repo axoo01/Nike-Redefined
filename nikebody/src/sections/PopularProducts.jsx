@@ -8,7 +8,7 @@ const PopularProductCard = ({ imgURL, name, price, isActive }) => {
     <div className={`flex flex-1 flex-col w-full transition-all duration-300 max-sm:py-5 ${
       isActive ? 'scale-105 opacity-100' : 'scale-95 opacity-70'
     }`}>
-      <div className="relative overflow-hidden rounded-2xl">
+      <div className="relative overflow-hidden rounded-2xl hover:scale-95 transition-transform duration-1000">
         <img 
           src={imgURL}
           alt={name}
@@ -134,7 +134,7 @@ const PopularProducts = () => {
         </div>
 
         {/* Desktop Grid */}
-        <div className="mt-16 hidden sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm:gap-6 gap-14">
+        <div className="mt-10 hidden sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm:gap-6 gap-14">
           {products.map((product) => (
             <PopularProductCard key={product.name} {...product} isActive={true} />
           ))}
@@ -154,15 +154,15 @@ const PopularProducts = () => {
             onMouseLeave={handleMouseUp}
           >
             <div 
-              className="flex transition-transform duration-300 ease-out"
+              className="flex transition-transform duration-1000 ease-out"
               style={{
-                transform: `translateX(calc(-${currentIndex * 60}% + ${translateX}px))`
+                transform: `translateX(calc(-${currentIndex * 70}% + ${translateX}px))`
               }}
             >
               {products.map((product, index) => (
                 <div 
                   key={product.name} 
-                  className="min-w-[60%] px-2 flex justify-center"
+                  className="min-w-[75%] px-2 flex justify-center"
                 >
                   <PopularProductCard 
                     {...product} 
@@ -174,7 +174,7 @@ const PopularProducts = () => {
           </div>
 
           {/* Dot Indicators */}
-          <div className="flex justify-center mt-8 gap-2">
+          <div className="flex justify-center mt-1 gap-2">
             {products.map((_, index) => (
               <button
                 key={index}
