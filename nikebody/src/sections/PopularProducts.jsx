@@ -141,7 +141,7 @@ const PopularProducts = () => {
         </div>
 
         {/* Mobile Carousel */}
-        <div className="mt-16 sm:hidden">
+        <div className="mt-10 sm:hidden">
           <div 
             ref={containerRef}
             className="relative overflow-hidden cursor-grab active:cursor-grabbing"

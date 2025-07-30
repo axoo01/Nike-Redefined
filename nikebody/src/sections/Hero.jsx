@@ -64,7 +64,7 @@ const Hero = () => {
           <div className="flex justify-start items-start flex-wrap mt-20 max-sm:mt-8 w-full gap-16 max-sm:gap-4">
             {statistics.map((stat, index) => (
               <div key={stat.label}>
-                <p className="text-4xl max-sm:text-[2.8rem] font-palanquin font-bold">
+                <p className="text-4xl max-sm:text-[2.7rem] font-palanquin font-bold">
                   {stat.value === "1k+" ? (
                     <FadeIn delay={index * 0.3} duration={4}>
                       {stat.value}
@@ -92,7 +92,7 @@ const Hero = () => {
             height={610}
             className="object-contain relative z-10"
             initial={{ scale: 1 }}
-            animate={{ scale: [1.2, 1] }}
+            animate={{ scale: [1.3, 1] }}
             transition={{ duration: 1, times: [0, 0.5, 1], ease: "easeOut" }}
           />
           <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
