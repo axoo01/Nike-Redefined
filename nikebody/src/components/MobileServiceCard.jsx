@@ -2,12 +2,12 @@ const MobileServiceCard = ({ imgURL, label, subtext, index, isActive, handleCard
   return (
     <div className={`group relative flex-1 sm:w-[280px] sm:min-w-[240px] w-full transition-all duration-700 ease-out cursor-pointer ${isActive ? 'scale-105' : ''}`}>
       {/* Main card */}
-      <div className={`relative bg-white dark:bg-[#1A2332] rounded-[20px] px-4 py-8 border border-gray-50 dark:border-[#2A3441] overflow-hidden transition-all duration-500 ${isActive ? 'hover:shadow-2xl dark:hover:shadow-coral-red/10 ' : ''}`}>
+      <div className={`relative bg-white dark:bg-[#1A2332] rounded-[20px] shadow-xl  px-4 py-8 border border-gray-100 dark:border-[#2A3441] overflow-hidden transition-all duration-500 ${isActive ? 'hover:shadow-2xl dark:hover:shadow-coral-red/10 ' : ''}`}>
         
         {/* Icon and title */}
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className={`w-10 h-10 flex justify-center items-center bg-coral-red rounded-full shadow-lg transition-all duration-500 ${isActive ? 'scale-125 shadow-coral-red/10' : ''}`}>
+            <div className={`w-10 h-10 flex justify-center  items-center bg-coral-red rounded-full shadow-lg transition-all duration-500 ${isActive ? 'scale-125 shadow-coral-red/10' : ''}`}>
               <div className={`absolute inset-0 bg-coral-red rounded-full opacity-0 ${isActive ? 'opacity-50 scale-150 blur-md' : ''} transition-all duration-500`}></div>
               <img 
                 src={imgURL} 

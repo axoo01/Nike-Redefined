@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { reviews } from "../constants";
 import { ReviewCard, MobileReviewCard } from "../components";
@@ -5,7 +6,7 @@ import { SectionAnimation } from "../components";
 
 const CustomerReviews = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0); // Start on first card
+  const [activeIndex, setActiveIndex] = useState(1); // Start on middle card
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 640);
@@ -17,7 +18,6 @@ const CustomerReviews = () => {
   const handleSwipe = (index) => {
     if (index >= 0 && index < reviews.length) {
       setActiveIndex(index); // Sync activeIndex with swipe
-      console.log("activeIndex:", index); // Debug
     }
   };
 
@@ -25,7 +25,7 @@ const CustomerReviews = () => {
     <SectionAnimation>
       {isMobile ? (
         <section className="max-container p-4">
-          <h3 className="font-palanquin text-center text-3xl font-bold">
+          <h3 className="font-palanquin text-center text-4xl font-bold">
             What Our <span className="text-coral-red">Customers </span>Say?
           </h3>
           <p className="info-text m-auto mt-4 max-w-lg text-center text-base">
@@ -34,7 +34,7 @@ const CustomerReviews = () => {
           <p className="text-sm text-coral-red text-center mt-4 animate-pulse">
             ← Don't take our word for it - swipe theirs →
           </p>
-          <div className="relative h-[360px] mt-4 overflow-hidden">
+          <div className="relative h-[380px] mt-4 overflow-hidden">
             {reviews.map((review, index) => (
               <MobileReviewCard
                 key={review.customerName}
