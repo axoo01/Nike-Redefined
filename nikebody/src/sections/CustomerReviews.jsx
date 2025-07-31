@@ -31,7 +31,7 @@ const CustomerReviews = () => {
           <p className="info-text m-auto mt-4 max-w-lg text-center text-base">
             Hear genuine stories from our satisfied customers about their exceptional experiences with us.
           </p>
-          <p className="text-sm text-coral-red text-center mt-4 animate-pulse">
+          <p className="font-montserrat text-sm text-coral-red text-center mt-4 animate-pulse">
             ← Don't take our word for it - swipe theirs →
           </p>
           <div className="relative h-[380px] mt-4 overflow-hidden">

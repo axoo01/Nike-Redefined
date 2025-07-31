@@ -29,7 +29,7 @@ const MobileServices = ({subtext}) => {
   return (
     <div className=" px-4">
       <div className="max-w-md mx-auto pt-6">
-        <p className="text-center font-montserrat text-gray-400 dark:text-light-gray lg:max-w-lg mb-6 animate-pulse">
+        <p className="text-sm text-center font-montserrat text-gray-400 dark:text-light-gray lg:max-w-lg mb-6 animate-pulse">
           Tap to explore how we got your back!
         </p>
       

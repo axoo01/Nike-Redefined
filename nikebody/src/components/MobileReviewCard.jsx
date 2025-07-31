@@ -40,7 +40,7 @@ const MobileReviewCard = ({ imgURL, customerName, rating, feedback, index, onSwi
         <p
           className="relative z-10 mb-6 font-medium text-gray-700 dark:text-gray-400 text-sm text-center max-w-[200px] leading-relaxed italic"
         >
-          {feedback}
+          "{feedback}"
         </p>
 
         {/* Rating */}
