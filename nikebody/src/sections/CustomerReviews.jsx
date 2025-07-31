@@ -25,10 +25,10 @@ const CustomerReviews = () => {
     <SectionAnimation>
       {isMobile ? (
         <section className="max-container p-4">
-          <h3 className="font-palanquin text-center text-4xl font-bold">
+          <h3 className="font-palanquin  text-4xl font-bold">
             What Our <span className="text-coral-red">Customers </span>Say?
           </h3>
-          <p className="info-text m-auto mt-4 max-w-lg text-center text-base">
+          <p className="info-text m-auto mt-4 max-w-lg  text-base">
             Hear genuine stories from our satisfied customers about their exceptional experiences with us.
           </p>
           <p className="font-montserrat text-sm text-coral-red text-center mt-4 animate-pulse">
