@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
 import { star } from "../assets/icons";
 
@@ -10,39 +10,34 @@ const MobileReviewCard = ({ imgURL, customerName, rating, feedback, index, onSwi
     setIsActive(!isActive);
   };
 
+  useEffect(() => {
+    console.log("card index:", index); // Debug
+  }, [index]);
+
   const handlers = useSwipeable({
-    onSwipedUp: () => onSwipe(index + 1),
-    onSwipedDown: () => onSwipe(index - 1),
+    onSwipedLeft: () => onSwipe(index + 1),
+    onSwipedRight: () => onSwipe(index - 1),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
+    delta: 10, // Ensure swipe sensitivity
   });
 
   return (
     <div
       {...handlers}
-      className={`group absolute inset-x-0 flex justify-center items-center flex-col transition-all duration-1000 ease-out cursor-pointer !sm:w-[200px] !sm:min-w-[160px] w-full ${
-        isActive ? "scale-105 z-50" : "scale-[0.95] z-[30]"
+      className={`group absolute flex justify-center items-center flex-col transition-all duration-1000 ease-out cursor-pointer !sm:w-[250px] !sm:min-w-[220px] w-full ${
+        index === 0 || isActive ? "scale-110 z-50 shadow-2xl dark:shadow-black" : "scale-[0.95] z-[30] shadow-md"
       }`}
       style={{
-        transform: isActive ? "translateY(0px)" : `translateY(${index * 30}px)`,
-        background: isActive ? "" : "linear-gradient(to bottom, rgba(255, 77, 77, 0.1), rgba(255, 77, 77, 0.05))",
-        backgroundPosition: `0 ${index * 5}px`,
-        transition: "transform 1000ms ease-out, background-position 1000ms ease-out",
+        transform: `translateX(${index * 260}px)`,
+        boxShadow: index === 0 || isActive ? "0 4px 12px rgba(0, 0, 0, 0.2)" : "0 2px 6px rgba(0, 0, 0, 0.1)",
+        transition: "transform 1000ms ease-out, box-shadow 1000ms ease-out",
       }}
       onClick={handleCardClick}
     >
-      {/* Animated glow background */}
-      <div
-        className={`absolute -inset-2 bg-gradient-to-r from-coral-red/20 via-orange-400/20 to-coral-red/20 rounded-3xl opacity-0 ${
-          isActive ? "opacity-100" : ""
-        } blur-xl transition-opacity duration-1000`}
-      ></div>
-
       {/* Main card */}
       <div
-        className={`relative bg-white dark:bg-[#1A2332] border border-gray-100 dark:border-[#2A3441] shadow-xl dark:shadow-gray-800 ${
-          isActive ? "hover:shadow-2xl dark:hover:shadow-black border-coral-red" : ""
-        } rounded-3xl py-6 px-4 w-full !max-w-[200px] overflow-hidden transition-all duration-1000 flex justify-center items-center flex-col`}
+        className={`relative bg-white dark:bg-[#1A2332] border border-gray-100 dark:border-[#2A3441] rounded-3xl py-6 px-4 w-full !max-w-[250px] overflow-hidden transition-all duration-1000 flex justify-center items-center flex-col`}
       >
         {/* Close button for active card */}
         {isActive && (
@@ -78,14 +73,14 @@ const MobileReviewCard = ({ imgURL, customerName, rating, feedback, index, onSwi
 
         {/* Quote */}
         <p
-          className="relative z-10 mb-6 font-medium text-gray-700 dark:text-gray-400 text-sm text-center max-w-[160px] leading-relaxed italic"
+          className="relative z-10 mb-6 font-medium text-gray-700 dark:text-gray-400 text-sm text-center max-w-[200px] leading-relaxed italic"
         >
-          {isActive ? `"${feedback}"` : `"${feedback.substring(0, 50)}..."`}
+          {feedback}
         </p>
 
         {/* Rating */}
         <div
-          className="relative z-10 mb-4 flex justify-center items-center gap-2 bg-gray-50 dark:bg-[#243041] px-3 py-1 rounded-full"
+          className="relative z-10 mb-4 flex justify-center items-center gap-1 bg-gray-50 dark:bg-[#243041] px-3 py-1 rounded-full"
         >
           {[...Array(5)].map((_, i) => {
             const starNumber = i + 1;

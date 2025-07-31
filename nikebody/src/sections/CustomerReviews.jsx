@@ -5,7 +5,7 @@ import { SectionAnimation } from "../components";
 
 const CustomerReviews = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0); // Start on first card
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 640);
@@ -16,7 +16,8 @@ const CustomerReviews = () => {
 
   const handleSwipe = (index) => {
     if (index >= 0 && index < reviews.length) {
-      setActiveIndex(index);
+      setActiveIndex(index); // Sync activeIndex with swipe
+      console.log("activeIndex:", index); // Debug
     }
   };
 
@@ -28,10 +29,12 @@ const CustomerReviews = () => {
             What Our <span className="text-coral-red">Customers </span>Say?
           </h3>
           <p className="info-text m-auto mt-4 max-w-lg text-center text-base">
-            Hear genuine stories from our satisfied customers about their 
-            exceptional experiences with us.
+            Hear genuine stories from our satisfied customers about their exceptional experiences with us.
           </p>
-          <div className="relative h-[260px] mt-8 overflow-hidden">
+          <p className="text-sm text-coral-red text-center mt-4 animate-pulse">
+            ← Don't take our word for it - swipe theirs →
+          </p>
+          <div className="relative h-[360px] mt-4 overflow-hidden">
             {reviews.map((review, index) => (
               <MobileReviewCard
                 key={review.customerName}
@@ -47,7 +50,7 @@ const CustomerReviews = () => {
                 key={index}
                 className={`w-2 h-2 bg-coral-red rounded-full ${
                   index === activeIndex ? "opacity-100" : "opacity-50"
-                } hover:opacity-100 transition-opacity`}
+                } hover:opacity-100 transition-opacity duration-1000`}
                 onClick={() => setActiveIndex(index)}
                 aria-label={`Select review ${index + 1}`}
               ></button>
@@ -60,8 +63,7 @@ const CustomerReviews = () => {
             What Our <span className="text-coral-red">Customers </span>Say?
           </h3>
           <p className="info-text m-auto mt-4 max-w-lg text-center">
-            Hear genuine stories from our satisfied customers about their 
-            exceptional experiences with us.
+            Hear genuine stories from our satisfied customers about their exceptional experiences with us.
           </p>
           <div className="mt-[4rem] flex flex-1 justify-evenly items-center max-lg:flex-col gap-10">
             {reviews.map((review) => (
