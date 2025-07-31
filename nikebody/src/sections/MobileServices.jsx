@@ -27,9 +27,9 @@ const MobileServices = ({subtext}) => {
   };
 
   return (
-    <div className="dark:bg-slate-gray px-4">
+    <div className=" px-4">
       <div className="max-w-md mx-auto pt-6">
-        <p className="text-center font-montserrat text-gray-400 dark:text-slate-300 lg:max-w-lg mb-6 animate-pulse">
+        <p className="text-center font-montserrat text-gray-400 dark:text-light-gray lg:max-w-lg mb-6 animate-pulse">
           Tap to explore how we got your back!
         </p>
       
@@ -43,7 +43,7 @@ const MobileServices = ({subtext}) => {
               style={{
                 transform: activeCard === index 
                   ? 'translateY(0px) translateX(0px) scale(1.05)'
-                  : `translateY(${getStackIndex(index) * 60}px) translateX(${getTranslateX(index)}px) scale(${1 - getStackIndex(index) * 0.04})`,
+                  : `translateY(${getStackIndex(index) * 65}px) translateX(${getTranslateX(index)}px) scale(${1 - getStackIndex(index) * 0.04})`,
                 zIndex: activeCard === index ? 50 : 30 - getStackIndex(index),
               }}
               onClick={() => handleCardClick(index)}
@@ -59,7 +59,7 @@ const MobileServices = ({subtext}) => {
         </div>
 
         {/* Shoe Icon Progress Indicators */}
-        <div className="flex justify-center mt-2 gap-2">
+        <div className="flex justify-center mt-3 gap-5">
           {services.map((service, index) => (
             <button
               key={index}
@@ -76,7 +76,7 @@ const MobileServices = ({subtext}) => {
                 alt={`Service ${index + 1}`}
                 width={20}
                 height={20}
-                className="relative z-10"
+                className="relative z-10 bg-black dark:bg-transparent"
               />
             </button>
           ))}

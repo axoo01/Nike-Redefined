@@ -5,7 +5,7 @@ const MobileServiceCard = ({ imgURL, label, subtext, index, isActive, handleCard
       <div className={`absolute -inset-2 bg-gradient-to-r from-coral-red/20 via-orange-400/20 to-coral-red/20 rounded-3xl opacity-0 ${isActive ? 'opacity-100' : ''} blur-xl transition-all duration-500`}></div>
       
       {/* Main card */}
-      <div className={`relative bg-white dark:bg-[#1A2332] rounded-[20px] shadow-3xl dark:shadow-coral-red/5 px-4 py-6 border border-gray-50 dark:border-[#2A3441] overflow-hidden transition-all duration-500 ${isActive ? 'hover:shadow-2xl dark:hover:shadow-coral-red/10' : ''}`}>
+      <div className={`relative bg-white dark:bg-[#1A2332] rounded-[20px] shadow-3xl dark:shadow-coral-red/5 px-4 py-8 border border-gray-50 dark:border-[#2A3441] overflow-hidden transition-all duration-500 ${isActive ? 'hover:shadow-2xl dark:hover:shadow-coral-red/10 ' : ''}`}>
         
         {/* Icon and title */}
         <div className="flex items-center justify-between">
