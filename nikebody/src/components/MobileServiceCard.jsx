@@ -2,7 +2,7 @@ const MobileServiceCard = ({ imgURL, label, subtext, index, isActive, handleCard
   return (
     <div className={`group relative flex-1 sm:w-[280px] sm:min-w-[240px] w-full transition-all duration-700 ease-out cursor-pointer ${isActive ? 'scale-105' : ''}`}>
       {/* Main card */}
-      <div className={`relative bg-white dark:bg-[#1A2332] rounded-[20px]  px-4 py-8 border border-gray-50 dark:border-[#2A3441] overflow-hidden transition-all duration-500 ${isActive ? 'hover:shadow-2xl dark:hover:shadow-coral-red/10 ' : ''}`}>
+      <div className={`relative bg-white dark:bg-[#1A2332] rounded-[20px] px-4 py-8 border border-gray-50 dark:border-[#2A3441] overflow-hidden transition-all duration-500 ${isActive ? 'hover:shadow-2xl dark:hover:shadow-coral-red/10 ' : ''}`}>
         
         {/* Icon and title */}
         <div className="flex items-center justify-between">
