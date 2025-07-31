@@ -1,13 +1,12 @@
-const ServiceCard = ({ imgURL, label, subtext, index }) => {
+const ServiceCard = ({ imgURL, label, subtext, index, isActive }) => {
   const getCardTransform = () => {
-    if (index === 0) return "lg:hover:translate-x-4"
-    if (index === 2) return "lg:hover:-translate-x-4"
-    return "lg:hover:-translate-y-6"
-  }
+    if (index === 0) return "lg:hover:translate-x-4";
+    if (index === 2) return "lg:hover:-translate-x-4";
+    return "lg:hover:-translate-y-6";
+  };
 
   return (
-    <div className={`group relative flex-1 sm:w-[350px] sm:min-w-[300px] w-full transition-all duration-700 ease-out cursor-pointer ${getCardTransform()} hover:scale-105`}>
-      
+    <div className={`group relative flex-1 sm:w-[350px] sm:min-w-[200px] w-full transition-all duration-1000 ease-out cursor-pointer ${isActive ? 'scale-105' : ''} ${getCardTransform()}`}>
       {/* Animated glow background */}
       <div className="absolute -inset-2 bg-gradient-to-r from-coral-red/20 via-orange-400/20 to-coral-red/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500"></div>
       
@@ -40,7 +39,7 @@ const ServiceCard = ({ imgURL, label, subtext, index }) => {
         <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-coral-red to-orange-500 group-hover:w-full transition-all duration-700 delay-200"></div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ServiceCard
+export default ServiceCard;

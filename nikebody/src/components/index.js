@@ -6,6 +6,7 @@ import ServiceCard from './ServiceCard';
 import ReviewCard from './ReviewCard';
 import {Animation, SectionAnimation} from './Animation'
 import Counter from './Counter';
+import MobileServiceCard from './MobileServiceCard'
 export {
     Button,
     PopularProductCard,
@@ -15,5 +16,6 @@ export {
     ReviewCard,
     Animation,
     SectionAnimation,
-    Counter
+    Counter,
+    MobileServiceCard
 }
