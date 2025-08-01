@@ -39,7 +39,7 @@ const CustomerReviews = () => {
                 key={review.customerName}
                 {...review}
                 index={index - activeIndex}
-                onSwipe={handleSwipe}
+                onSwipe={setActiveIndex}
               />
             ))}
           </div>
