@@ -113,13 +113,12 @@ const MobileMenu = ({ isOpen, onClose, toggleMenu, isDarkMode }) => {
               stiffness: 100,
               duration: 0.5
             }}
-            className="lg:hidden fixed top-0 left-0 w-80 h-full bg-white/60 dark:bg-gray-900/40 backdrop-blur-md z-50 flex flex-col border-r border-white/20 dark:border-gray-700/20 shadow-2xl"
+            className="lg:hidden fixed top-0 left-0 w-70 h-full bg-white/60 dark:bg-gray-900/40 backdrop-blur-md z-50 flex flex-col border-r border-white/20 dark:border-gray-700/20 shadow-2xl"
           >
             {/* Header with close button */}
             <div className="flex justify-between items-center p-6 border-b border-white/20">
               <img src={headerLogo} alt="Logo" width={100} height={25} />
               <div className="flex items-center gap-2">
-                <DarkModeToggle />
                 <AnimatedHamburger isOpen={true} onClick={toggleMenu} isDarkMode={isDarkMode} />
               </div>
             </div>
@@ -160,7 +159,7 @@ const MobileMenu = ({ isOpen, onClose, toggleMenu, isDarkMode }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.4 }}
-                className="block w-full text-center py-4 px-6 bg-coral-red text-white font-montserrat font-semibold rounded-full hover:bg-coral-red/90 transition-all duration-300 hover:scale-105 shadow-lg"
+                className="block w-full text-center text-sm py-4 px-6 bg-coral-red text-white font-montserrat font-semibold rounded-full hover:bg-coral-red/90 transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 Sign In / Explore Now
               </motion.a>
