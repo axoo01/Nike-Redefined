@@ -75,7 +75,7 @@ export const reviews = [
         imgURL: customerX,
         customerName: 'Axcel Tunda',
         rating: 3.5,
-        feedback: "The attention to detail buh the quality of the product didn't exceeded my expectations."
+        feedback: "The attention to detail and the quality of the shoes delivered outstanding craftsmanship beautifully."
     },
     {
         imgURL: customer2,
