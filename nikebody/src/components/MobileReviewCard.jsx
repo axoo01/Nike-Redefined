@@ -38,7 +38,7 @@ const MobileReviewCard = ({ imgURL, customerName, rating, feedback, index, onSwi
 
         {/* Quote */}
         <p
-          className="relative z-10 mb-6 font-medium text-gray-700 dark:text-gray-400 text-sm text-center max-w-[200px] leading-relaxed italic"
+          className="relative z-10 mb-6  text-slate-gray dark:text-gray-400 text-sm text-center max-w-[200px] leading-relaxed italic"
         >
           "{feedback}"
         </p>
@@ -78,7 +78,7 @@ const MobileReviewCard = ({ imgURL, customerName, rating, feedback, index, onSwi
 
         {/* Verified badge */}
         <p
-          className="relative z-10 text-xs text-gray-500 dark:text-gray-400 mt-1 font-medium text-center"
+          className="relative z-10 text-xs text-gray-400 dark:text-gray-400 mt-1 font-medium text-center"
         >
           Verified Customer
         </p>

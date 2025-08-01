@@ -214,7 +214,7 @@ const Nav = ({ setIsMobileMenuOpen }) => {
   return (
     <>
       <header
-        className={`padding-x w-full fixed top-0 z-30  transition-all duration-300 shadow-md ${
+        className={`padding-x w-full fixed top-0 z-30  transition-all duration-300 sm:shadow-md ${
           isScrolled ? "py-3 shadow-sm bg-white/50 backdrop-blur-md dark:bg-gray-800/50 " : "py-8"
         }`}
       >
@@ -235,7 +235,7 @@ const Nav = ({ setIsMobileMenuOpen }) => {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 ">
             <a
               href="/"
               className="max-lg:hidden text-slate-gray dark:text-light-gray font-montserrat hover:text-coral-red dark:hover:text-coral-red/90 transform transition-all duration-500 hover:scale-105"
