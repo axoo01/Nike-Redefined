@@ -14,7 +14,7 @@ const MobileReviewCard = ({ imgURL, customerName, rating, feedback, index, onSwi
   return (
     <div
       {...handlers}
-      className={`group absolute flex justify-center items-center flex-col transition-all duration-1000 ease-out cursor-pointer sm:w-[250px] min-w-[220px] max-w-[250px] w-full ${
+      className={`group absolute flex justify-center items-center flex-col transition-all duration-1000 ease-out cursor-pointer !sm:w-[250px] !sm:min-w-[220px] w-full ${
         index === 0 ? "scale-110 z-50" : "scale-[0.95] z-[30] "
       }`}
       style={{
