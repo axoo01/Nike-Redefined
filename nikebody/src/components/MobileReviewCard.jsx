@@ -3,12 +3,12 @@ import { star } from "../assets/icons";
 
 const MobileReviewCard = ({ imgURL, customerName, rating, feedback, index, onSwipe }) => {
   const handlers = useSwipeable({
-    onSwipedLeft: () => onSwipe(index + 1),
-    onSwipedRight: () => onSwipe(index - 1),
+    onSwipedLeft: () => onSwipe(1),
+    onSwipedRight: () => onSwipe(-1),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
     trackTouch: true,
-    delta: 10,
+    delta: 5, // More sensitive
   });
 
   return (

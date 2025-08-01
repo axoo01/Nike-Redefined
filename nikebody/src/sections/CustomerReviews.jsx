@@ -39,7 +39,7 @@ const CustomerReviews = () => {
                 key={review.customerName}
                 {...review}
                 index={index - activeIndex}
-                onSwipe={setActiveIndex}
+                onSwipe={(direction) => setActiveIndex(prev => Math.min(Math.max(prev + direction, 0), reviews.length - 1))}
               />
             ))}
           </div>
