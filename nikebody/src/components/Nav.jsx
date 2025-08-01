@@ -141,7 +141,7 @@ const MobileMenu = ({ isOpen, onClose, toggleMenu, isDarkMode }) => {
                     <a
                       href={item.href}
                       onClick={onClose}
-                      className="block text-2xl font-montserrat font-[400] text-slate-gray dark:text-light-gray 
+                      className="block text-lg font-montserrat font-[400] text-slate-gray dark:text-light-gray 
                       hover:text-coral-red dark:hover:text-coral-red transition-all duration-500
                       hover:translate-x-4 hover:scale-105 py-2 border-b border-white/10 hover:border-coral-red/30"
                     >

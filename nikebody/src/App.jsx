@@ -18,7 +18,7 @@ const App = () => {
           isMobileMenuOpen ? 'lg:transform-none shadow-3xl border border-gray-900/50 dark:border-coral-red/90' : ''
         }`}
         animate={{
-          x: isMobileMenuOpen ? 340 : 0,
+          x: isMobileMenuOpen ? 330 : 0,
           scale: isMobileMenuOpen ? 0.97 : 1,
           borderRadius: isMobileMenuOpen ? '100px' : '0px',
         }}
