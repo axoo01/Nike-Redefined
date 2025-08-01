@@ -214,8 +214,8 @@ const Nav = ({ setIsMobileMenuOpen }) => {
   return (
     <>
       <header
-        className={`padding-x w-full fixed top-0 z-30 bg-white/50 dark:bg-gray-800/50 backdrop-blur-md transition-all duration-300 border-b border-white/10 ${
-          isScrolled ? "py-3 shadow-sm" : "py-8"
+        className={`padding-x w-full fixed top-0 z-30  transition-all duration-300 shadow-md ${
+          isScrolled ? "py-3 shadow-sm bg-white/50 backdrop-blur-md dark:bg-gray-800/50 " : "py-8"
         }`}
       >
         <nav className="flex justify-between items-center max-container">
