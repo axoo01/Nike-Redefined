@@ -67,7 +67,7 @@ const Footer = () => {
           height={20}
           className="rounded-full m-0" 
           />
-          <p>Copyright. All rights reserved.</p>
+          <p>@Axocrafts. All rights reserved.</p>
         </div>
         <p className="font-montserrat cursor-pointer hover:text-slate-gray">
           Terms & Conditions </p>
