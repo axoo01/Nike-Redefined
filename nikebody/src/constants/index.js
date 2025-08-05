@@ -1,5 +1,5 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2,customerX, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2,customerX, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, tariq, tariq2 } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
@@ -72,8 +72,8 @@ export const services = [
 
 export const reviews = [
     {
-        imgURL: customerX,
-        customerName: 'axoaxo',
+        imgURL: tariq,
+        customerName: 'Tariq',
         rating: 3.5,
         feedback: "The attention to detail and the quality of the shoes delivered outstanding craftsmanship."
     },

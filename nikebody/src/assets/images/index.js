@@ -5,6 +5,9 @@ import bigShoe3 from './big-shoe3.png'
 import customer1 from './customer1.jpg'
 import customer2 from './customer2.jpeg'
 import customerX from './customerX.jpg'
+import tariq from './tariq.jpeg'
+import tariq2 from './tariq2.png'
+
 
 import footerLogo from './footer-logo.svg'
 import headerLogo from './header-logo.svg'
@@ -30,6 +33,8 @@ export {
     customer1,
     customer2,
     customerX,
+    tariq,
+    tariq2,
 
     footerLogo,
     headerLogo,
