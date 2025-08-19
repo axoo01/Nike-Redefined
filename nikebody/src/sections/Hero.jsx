@@ -35,6 +35,12 @@ const FadeIn = ({ children, duration = 2, delay = 0 }) => {
 
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
+  useEffect(() => {
+    shoes.forEach((shoe) => {
+      const img = new Image();
+      img.src = shoe.bigShoe;
+    });
+  }, []);
 
   return (
     <Animation delay={0.4}>
